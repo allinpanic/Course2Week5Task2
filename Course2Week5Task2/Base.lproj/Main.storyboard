@@ -1,56 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uzc-2h-BWu">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--ViewController1-->
         <scene sceneID="e8u-RO-TYr">
             <objects>
-                <viewController id="wqN-xe-IuA" customClass="ViewController2" customModule="Course2Week5Task2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wqN-xe-IuA" customClass="ViewController1" customModule="Course2Week5Task2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="84Y-JD-Q9K">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUz-mO-vG1">
+                                <rect key="frame" x="126" y="346" width="123" height="30"/>
+                                <state key="normal" title="toViewController3"/>
+                                <connections>
+                                    <action selector="toVC3ButtonPressed:" destination="wqN-xe-IuA" eventType="touchUpInside" id="i8u-bH-Gw0"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5xe-MI-TzD">
+                                <rect key="frame" x="85" y="292" width="205" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="1oF-Nt-eBG"/>
+                                    <constraint firstAttribute="height" constant="34" id="If2-x7-7w6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5xe-MI-TzD" firstAttribute="centerX" secondItem="xev-JT-SLC" secondAttribute="centerX" id="dIW-6g-JnW"/>
+                            <constraint firstItem="YUz-mO-vG1" firstAttribute="top" secondItem="5xe-MI-TzD" secondAttribute="bottom" constant="20" id="eFb-Sn-Ha8"/>
+                            <constraint firstItem="YUz-mO-vG1" firstAttribute="centerX" secondItem="xev-JT-SLC" secondAttribute="centerX" id="kfE-Qw-hkz"/>
+                            <constraint firstItem="5xe-MI-TzD" firstAttribute="centerY" secondItem="xev-JT-SLC" secondAttribute="centerY" id="o23-NG-ool"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xev-JT-SLC"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="K1L-KR-vNM"/>
+                    <tabBarItem key="tabBarItem" title="ViewController1" image="icon" selectedImage="icon" id="K1L-KR-vNM"/>
+                    <connections>
+                        <outlet property="textField" destination="5xe-MI-TzD" id="Q6S-my-3wM"/>
+                        <outlet property="toVC3Button" destination="YUz-mO-vG1" id="lss-sm-2s2"/>
+                        <segue destination="lga-wz-8aV" kind="presentation" identifier="toVC3" modalPresentationStyle="currentContext" modalTransitionStyle="coverVertical" id="O17-Va-MOR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ps6-df-12B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="937.68115942028987" y="-390.40178571428572"/>
+            <point key="canvasLocation" x="936.79999999999995" y="-390.85457271364322"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller3-->
         <scene sceneID="zec-2j-QXK">
             <objects>
-                <viewController id="lga-wz-8aV" sceneMemberID="viewController">
+                <viewController id="lga-wz-8aV" customClass="ViewController3" customModule="Course2Week5Task2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rb7-7R-5iR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um0-dv-408">
+                                <rect key="frame" x="166.5" y="281" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9L-QF-1xd">
+                                <rect key="frame" x="161.5" y="341" width="52" height="30"/>
+                                <state key="normal" title="Unwind"/>
+                                <connections>
+                                    <action selector="unwindButtonPressed:" destination="lga-wz-8aV" eventType="touchUpInside" id="ucE-nd-4Sz"/>
+                                    <segue destination="UhW-KG-2kh" kind="unwind" identifier="unwind" unwindAction="unwindToFirstViewControllerWithSegue:" id="Rhr-ph-STp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="um0-dv-408" firstAttribute="top" secondItem="g4U-qb-1cw" secondAttribute="top" constant="281" id="10P-bi-4iG"/>
+                            <constraint firstItem="C9L-QF-1xd" firstAttribute="centerX" secondItem="g4U-qb-1cw" secondAttribute="centerX" id="2So-U1-a4F"/>
+                            <constraint firstItem="g4U-qb-1cw" firstAttribute="bottom" secondItem="C9L-QF-1xd" secondAttribute="bottom" constant="296" id="ClR-mp-YfV"/>
+                            <constraint firstItem="um0-dv-408" firstAttribute="centerX" secondItem="g4U-qb-1cw" secondAttribute="centerX" id="c2g-66-GYZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="g4U-qb-1cw"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2PR-Ip-KaP"/>
+                    <connections>
+                        <outlet property="textLabel" destination="um0-dv-408" id="Zw5-tp-OWo"/>
+                        <outlet property="unwindButton" destination="C9L-QF-1xd" id="goI-ip-rVn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlF-bp-2ho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1941" y="-392"/>
+            <point key="canvasLocation" x="1874" y="-391"/>
         </scene>
-        <!--Item-->
+        <!--ViewController2-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <viewController id="BYZ-38-t0r" customClass="ViewController1" customModule="Course2Week5Task2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController2" customModule="Course2Week5Task2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iar-qy-Nlj">
+                                <rect key="frame" x="126" y="294" width="123" height="30"/>
+                                <state key="normal" title="toViewController4"/>
+                                <connections>
+                                    <action selector="toVC4ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bxz-Lm-E3x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbK-PD-1Rh">
+                                <rect key="frame" x="106.5" y="332" width="162" height="30"/>
+                                <state key="normal" title="addChildViewController"/>
+                                <connections>
+                                    <action selector="addChildVCButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NIA-ux-ro7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iar-qy-Nlj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9PL-cc-crs"/>
+                            <constraint firstItem="jbK-PD-1Rh" firstAttribute="top" secondItem="iar-qy-Nlj" secondAttribute="bottom" constant="8" id="LM4-QZ-aDa"/>
+                            <constraint firstItem="jbK-PD-1Rh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RtR-la-wZY"/>
+                            <constraint firstItem="iar-qy-Nlj" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="k5A-rr-dCe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="6v0-gn-sTm"/>
+                    <tabBarItem key="tabBarItem" title="ViewController2" image="icon" selectedImage="icon" id="6v0-gn-sTm"/>
+                    <connections>
+                        <outlet property="addChildVCButton" destination="jbK-PD-1Rh" id="Yxn-uR-SQo"/>
+                        <outlet property="toVC4Button" destination="iar-qy-Nlj" id="fUp-yK-NJv"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="UhW-KG-2kh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="938" y="322"/>
         </scene>
@@ -60,6 +143,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Uzc-2h-BWu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2XY-1D-DLu">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -73,4 +157,7 @@
             <point key="canvasLocation" x="27.536231884057973" y="-128.57142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon" width="25" height="25"/>
+    </resources>
 </document>
